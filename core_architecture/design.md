@@ -28,7 +28,8 @@ Document outlines plans for next generation architecture for publication and rep
 ## Architecture Overview 
 The diagram shows the components in the architecture towards providing scalable publication and management of metadata.
 
-![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design.drawio.png "Architecture Diagram")
+![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design.drawio.png#gh-light-mode-only "Architecture Diagram")
+![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design_dark.drawio.png#gh-dark-mode-only "Architecture Diagram")
 
 ## Components
 - Identity and Access management (IAM)

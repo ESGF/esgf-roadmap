@@ -40,7 +40,8 @@ Federation wide event stream to manage a distributed index and replication of da
 The Consumer API handles events passed from the Federated Event Stream that are received upstream from the Publisher and the Ingest API. The events are described above in the Publisher portion of this document. New dataset information is ingested as a STAC item into a Globus Search index.
 
 ## Architecture Diagram
-![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design.drawio.png "Architecture Diagram")
+![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design.drawio.png#gh-light-mode-only "Architecture Diagram")
+![An Architecture Diagram of the ESGF core which will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.](./diagrams/architecture_design_dark.drawio.png#gh-dark-mode-only "Architecture Diagram")
 >*Figure 1: The ESGF Core Architecture will consist of microservices that work together with a Federated Event Stream to replicate data and Publish, Retract, and Update metadata records for ESGF.*
 
 # References
