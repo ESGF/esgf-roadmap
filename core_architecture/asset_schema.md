@@ -49,14 +49,14 @@ Please note the example below is using "dummy" data. This is to present a possib
         "type": "netcdf",
         "description": "HTTPS Link",
         "roles": ["data"],
-        "alternate:name": "HTTPS"
+        "alternate:name": "ORNL"
       },
       "ALCF": {
         "href": "https://g-52ba3.fd635.8443.data.globus.org/css03_data/CMIP6/PAMIP/NCC/NorESM2-LM/pdSST-futAntSIC/r30i1p1f1/Emon/cSoil/gn/v20191108/cSoil_Emon_NorESM2-LM_pdSST-futAntSIC_r30i1p1f1_gn_200006-200105.nc",
         "type": "netcdf",
         "description": "HTTPS Link",
         "roles": ["data"],
-        "alternate:name": "HTTPS"
+        "alternate:name": "ALCF"
       }
     }
   },
@@ -72,14 +72,14 @@ Please note the example below is using "dummy" data. This is to present a possib
         "type": "netcdf",
         "description": "HTTPS Link",
         "roles": ["data"],
-        "alternate:name": "HTTPS"
+        "alternate:name": "ORNL"
       },
       "ALCF": {
         "href": "https://g-52ba3.fd635.8443.data.globus.org/css03_data/CMIP6/PAMIP/NCC/NorESM2-LM/pdSST-futAntSIC/r30i1p1f1/Emon/cSoil/gn/v20191108/cSoil_Emon_NorESM2-LM_pdSST-futAntSIC_r30i1p1f1_gn_200006-200105.nc",
         "type": "netcdf",
         "description": "HTTPS Link",
         "roles": ["data"],
-        "alternate:name": "HTTPS"
+        "alternate:name": "ALCF"
       }
     }
   }
