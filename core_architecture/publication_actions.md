@@ -1,7 +1,7 @@
 # Publication Actions
 The document outlines the various publication actions that will be supported for the AR7 timeline. It defines for each action, the policy that governs who can perform the action, and the outcome of the action. 
 
-## Publish new data set
+## Publish (new) data set
 
 This action is to publish a new dataset into the federation, such that it is available via discovery in the federation wide search indices.
 ### Policy
@@ -15,10 +15,22 @@ This action is to publish a new dataset into the federation, such that it is ava
 
 ### Processing steps
 
-- Publisher client 
+- Publisher client
+  - Scenario A - client checks for prior publication
+    - Queries index
+    - Outcome 1
+      - New Dataset
+    - Outcome 2
+      - Old version of dataset exists
+      - Client will make an "update" API request to Transaction service to "deprecate" old version
+        - Set `latest=false`
+    - Outcome 3
+      - This version already exists.
+      - Halt publication
+        - Unless some means to replace existing version? 
   - pushes record(s)
     - Payload granularity TBD
-- Publishing API
+- STAC Transaction API
   - Quick format check
     - This check uses the latest version of the CVs
     - 202 if success (with a handle for the request status)
@@ -29,6 +41,18 @@ This action is to publish a new dataset into the federation, such that it is ava
     - Register email for notification messages
       - Limit granularity of these or could be overwhelming
     - Affix the CV version used to validate for downstream consistency check
+  - Dataset version check, Scenario 2
+    - Transaction API module queries index
+    - Outcome 1
+      - New Dataset
+    - Outcome 2
+      - Old version of dataset exists
+      - API Module will push an "update" message to event stream to "deprecate" old version
+        - Set `latest=false`
+    - Outcome 3
+      - This version already exists.
+      - Halt publication
+        - Unless some means to replace existing version? 
   - Upon success API enqueues message
 - Message in Event stream Queue
 - Index nodes
@@ -38,6 +62,18 @@ This action is to publish a new dataset into the federation, such that it is ava
     - If the payload fails, this seems like an anomalous "consistency" problem
       - alert the DevOps team to investigate (email, Slack notifications, etc.),
       - alert the publisher of record as well
+  - ** Scenario 3**
+    - Index node Dequeue module handles the version check on the index
+    - Outcome 1
+      - New Dataset
+    - Outcome 2
+      - Old version of dataset exists
+      - Module will modify the record in the index of the previous version.
+        - Set `latest=false`
+    - Outcome 3
+      - This version already exists.
+      - Halt publication?
+        - Unless some means to replace existing version? 
   - Check record(s) do not already exist - if this is the case what is the behaviour?
   - Ingest payload into index
 - Replica nodes
@@ -130,31 +166,13 @@ Due to storage constraints or changes in direction site needs to purge replicas
   - Check correct site
   - Update records to remove replica entry
 
-### Update published data set
 
-Data provider wishes to publish a new version of a previously published dataset,  The old version is no longer "latest" 
-
-#### Policy
-#### Processing steps
-- Publisher client
-  - Push record 
-  - Must pass checks, see above, same semantics as 
-  - new publish
-  - Note this is simplified
-- Index Node
-  - Dequeue message
-    - Consistency check via CV version
-  - "Deprecate" prior version
-    - Update record for that version
-    - Submit replica deprecation notification
-  - Publish new version
-    - Submit new version notification
+#### Replica site actions on deprecated data
   - Replica site
     - Receive deprecation notice
     - Act on notice if within policy
       - Migrate to lower tier storage
       - Purge old data
-    - Receive new data message (same as above….)
 
 ## Open questions
 - Should a "hard delete" action be supported? If so, who should be allowed to do that?
