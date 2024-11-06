@@ -118,6 +118,7 @@ ESGF Record with STAC Payload
 ```
 {
     "metadata": {
+        "uuid": "3a8a2536-323b-4259-a218-6002a3491d25",
         "auth": {
             "auth_policy_id": "ESGF-Publish-00012",   # We need registered auth policies?
             "target_data": {
