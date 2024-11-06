@@ -118,7 +118,8 @@ ESGF Record with STAC Payload
 ```
 {
     "metadata": {
-        "uuid": "3a8a2536-323b-4259-a218-6002a3491d25",
+        "event_id": "3a8a2536-323b-4259-a218-6002a3491d25",
+        "request_id": "dee8c54c-e815-4863-87fb-7b606efd2501",
         "auth": {
             "auth_policy_id": "ESGF-Publish-00012",   # We need registered auth policies?
             "client_id": "CEDA-transaction-client",
