@@ -124,9 +124,8 @@ ESGF Record with STAC Payload
             "auth_policy_id": "ESGF-Publish-00012",   # We need registered auth policies?
             "client_id": "CEDA-transaction-client",
             "requester_data": {
-              "auth_service": AUTH_SERVICE,       # e.g., "auth.globus.org"    
+              "iss": AUTH_SERVICE,       # e.g., "auth.globus.org"    
               "sub": OAUTH_SUB_VALUE,             # e.g., "b16b12b6-d274-11e5-8e41-5fea585a1aa2"
-              "user_id": USER_ID,                 # e.g., "7fd9ab20-f6c5-4902-a7ac-b40bc4d8ad7b"
               "identity_provider": OAUTH_IDENTITY_PROVIDER_ID,   # e.g., "0dcf5063-bffd-40f7-b403-24f97e32fa47"
               "identity_provider_display_name": OAUTH_IDENTITY_PROVIDER_NAME   # e.g., "University of Chicago"
             }
