@@ -2,6 +2,7 @@
 
 All files in this folder are status updates on the ESGF-NG design, implementation, and deployment. Updates are listed below in reverse-chronological order. (Notation: `YYYY`-`MM`-`DD`.) These updates are provided by the ESGF-NG team to the ESGF Executive Committee. Each update includes links to source material from various ESGF GitHub repositories.
 
+* 2025-12-01: [ESGF-NG status as of 2025-12-01](./20251201-ESGF-NG.md)
 * 2025-11-03: [ESGF-NG status as of 2025-11-03](./20251103-ESGF-NG.md)
 * 2025-10-01: [ESGF-NG status as of 2025-10-01](./20251001-ESGF-NG.md)
 * 2025-09-02: [ESGF-NG status as of 2025-09-02](./20250902-ESGF-NG.md)
