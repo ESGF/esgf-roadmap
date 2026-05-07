@@ -1,0 +1,91 @@
+name: WCRP-ESMO Infrastructure Panel - ESGF RFC
+description: Request for comment from ESGF on WIP proposal
+title: "Request for comment from ESGF on WIP proposal"
+labels: ["WIP-RFC"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary  
+      description: |
+        *Brief* high-level summary of the integration/implementation
+        request (one paragraph)..
+    validations:
+      required: true
+  - type: textarea
+    id: infrastructure
+    attributes:
+      label: Infrastructure components
+      description: |
+        Identify the affected components of CMIP infrastructure. 
+
+        This should be concise and specific (e.g., names github repositories of relevant software packages). 
+
+        If affected components are not initially known, these details should be added during the review/discussion phase. 
+
+        Notes on implementation and further technical details are given below under *Technical details*.
+    validations:
+      required: true
+  - type: textarea
+    id: priority-timeline
+    attributes:
+      label: Prioritization and timeline
+      description: |
+        *Briefly* indicate the priority of the integration request, and the
+        timeline on which it is requested.
+
+        Suggested guidelines for prioritization:
+
+        * High: extremely important, perhaps critical
+        
+        * Medium: important and beneficial, but can live without it
+        
+        * Low: would be nice to have
+        
+        Rationale for prioritization and timeline can be explained below under *Motivation*.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Explain why this request is important. This doesn't need to be
+        brief. It can address:
+
+        * What use cases does it support? Who are the affected users?
+        
+        * How does it support the ecosystem of WCRP/ESMO projects?
+        
+        * How does it support provision of FAIR data?
+        
+        * What are the consequences of not doing this?
+    validations:
+      required: true
+  - type: textarea
+    id: tech-details
+    attributes:
+      label: Technical details
+      description: >
+        This section is for more detailed description of technical aspects
+        of the integration request, such as:
+
+        * Pathway to implementation (road map)
+        
+        * Dependencies on other infrastructure components
+        
+        * Detailed information that will be passed between infrastructure components
+        
+        * Potential obstacles to implementation
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: >
+        Explain any known risks / drawbacks of carrying out the proposal.
+
+        How would the proposal negatively or positively impact resilience (is it critically dependent on one person or institute?)
+    validations:
+      required: true
